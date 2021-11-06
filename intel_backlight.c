@@ -82,7 +82,7 @@ int main(int argc, char** argv)
 		NUM_ELEMENTS(brightness_levels));
 	*/
 	result = 0.5 + current * 100.0 / max;
-	printf ("current backlight value: %d%% (%d/%d)\n", result, current, max);
+	printf ("Поточна яскравість: %d%% (%d/%d)\n", result, current, max);
 	
 	if (argc > 1) {
 		uint32_t v;
@@ -103,7 +103,7 @@ int main(int argc, char** argv)
 			  (reg_read(BLC_PWM_CPU_CTL) &~ BACKLIGHT_DUTY_CYCLE_MASK) | v);
 		(void) reg_read(BLC_PWM_CPU_CTL);
 		result = 0.5 + v * 100.0 / max;
-		printf ("set backlight to %d%% (%d/%d)\n", result, v, max);
+		printf ("Встановлюємо яскравість %d%% (%d/%d)\n", result, v, max);
 	}
 
 	return result;
