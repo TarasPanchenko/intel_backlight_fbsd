@@ -86,9 +86,9 @@ int main(int argc, char** argv)
 	
 	if (argc > 1) {
 		uint32_t v;
-		if (0 == strcmp(argv[1], "incr")) 
+		if (0 == strcmp(argv[1], "+")) // incr -> "+"
 			v = 0.5 + brightness_incr(result) * max / 100.0;
-		else if (0 == strcmp(argv[1], "decr"))
+		else if (0 == strcmp(argv[1], "-")) // decr -> "-"
 			v = 0.5 + brightness_decr(result) * max / 100.0;
 		else	
 			v = 0.5 + atoi (argv[1]) * max / 100.0;
