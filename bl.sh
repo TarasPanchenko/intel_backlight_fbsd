@@ -1,1 +1,2 @@
-intel_backlight 15
+#!/bin/sh
+intel_backlight 30
