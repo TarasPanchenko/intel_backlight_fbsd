@@ -43,8 +43,11 @@ https://github.com/TarasPanchenko/intel_backlight_fbsd_ukr/tree/ukr
   Поточна яскравість: 60% (975/1625)
   Встановлюємо яскравість 51% (829/1625)
 
-# The included example allows adjusting brightness automatically based on the
-# input of the isl driver (currently not part of standard FreeBSD).
-#
-# Usage:
-#  ./isl_backlight.sh &
+Для постійного використання з визначеною яскравістю можна використовувати 
+$ ./bl.sh
+
+The included example allows adjusting brightness automatically based on the
+input of the isl driver (currently not part of standard FreeBSD).
+
+Usage:
+./isl_backlight.sh &
